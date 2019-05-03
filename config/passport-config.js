@@ -1,7 +1,7 @@
 
 // Passport Setup - `passport` module is required and setup in here
 const passport = require("passport");
-const User = require('./../models/userSchema');
+const User = require('../models/usersSchema');
 
 
 // serializeUser: saves the userObj passed by `done()` from localStrategy to a session
