@@ -14,38 +14,38 @@ passportRouter.get('/login', (req, res, next) => {
 })
 
 passportRouter.post('/login', passport.authenticate('local', {
-  successRedirect: '/',
-  failureRedirect: 'passport/login',
+  successRedirect: 'passport/login',
+  failureRedirect: 'error',
   passReqToCallback: true
 }))
 
 passportRouter.get('/signup', (req, res, next) => {
-  res.render('/signup')
+  res.render('passport/signup')
 })
 
 passportRouter.post('/signup', (req, res, next) => {
-  const { username, password } = req.body
+  const { username, password, firstName, lastName, department, position } = req.body
 
   if (username === '' || password === '') {
-    res.render('/signup', { message: 'Indicate username and password' })
+    res.render('passport/signup', { message: 'Indicate username and password' })
     return
   }
 
   User.findOne({ username })
     .then((user) => {
       if (user !== null) {
-        res.render('/signup', { message: 'The username already exists' })
+        res.render('passport/signup', { message: 'The username already exists' })
         return
       }
 
       const salt = bcrypt.genSaltSync(bcryptSalt)
       const hashPass = bcrypt.hashSync(password, salt)
 
-      const newUser = new User({ username, password: hashPass })
+      const newUser = new User({ username, firstName, lastName, department, position, password: hashPass })
 
       newUser.save((err) => {
         if (err) res.render('/signup', { message: 'Something went wrong' })
-        else res.redirect('/')
+        else res.redirect('/login')
       })
     })
     .catch(error => next(error))

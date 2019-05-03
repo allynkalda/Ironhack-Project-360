@@ -1,11 +1,23 @@
 <h2>Signup</h2>
 <form action="/signup" method="POST" id="form-container">
   <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
+  <input id="username" type="text" name="username" placeholder="Your username">
   <br><br>
   <label for="password">Password</label>
   <input id="password" type="password" name="password" placeholder="Your password">
-
+  <br>
+  <label for="firstName">First Name</label>
+  <input id="firstName" type="text" name="firstName" placeholder="Your first name">
+  <br>
+  <label for="lastName">Last Name</label>
+  <input id="lastName" type="text" name="lastName" placeholder="Your last name">
+  <br>
+  <label for="department">Department</label>
+  <input id="department" type="text" name="department" placeholder="Your department">
+  <br>
+  <label for="position">Position</label>
+  <input id="position" type="text" name="position" placeholder="Your position">
+  <br>
   <button type="submit">Create account</button>
   {{#if message}}
     <div class="error-message">{{ message }}</div>

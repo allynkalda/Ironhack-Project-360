@@ -45,7 +45,7 @@ app.use(session({
 
 // PASSPORT LINES MUST BE BELOW SESSION
 
-//	Auth Setup - how is the user being authenticated during login
+// Auth Setup - how is the user being authenticated during login
 passport.use(passportStrategySetup)
 
 // Creates Passport's methods and properties on `req` for use in out routes
