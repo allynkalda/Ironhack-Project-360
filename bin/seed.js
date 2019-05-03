@@ -7,32 +7,27 @@ const userList = [
   {
     name: "Anna Reyes",
     department: "Management", 
-    position: "executive",
-   // id: ObjectId
+    position: "executive"
   },
   {
     name: "Joao Ronaldo",
     department: "HR",
-    position: "entry-level",
-   // id: ObjectId
+    position: "entry-level"
   },
   {
     name: "Klaus Fischer",
     department: "IT",
-    position: "middle management",
-  //  id: ObjectId
+    position: "middle management"
   },
   {
     name: "Laura Jamieson",
     department: "IT",
-    position: "entry-level",
-   // id: ObjectId
+    position: "entry-level"
   },
   {
     name: "Marion Gillespie",
     department: "Management",
-    position: "middle management",
-   // id: ObjectId
+    position: "middle management"
   },
   {
     name: "Joan Millan",

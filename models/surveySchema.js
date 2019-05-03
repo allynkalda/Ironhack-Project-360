@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 
 const surveySchema = new Schema({
-	evaluator: user,
+	evaluator: userId,
     evaluated: ObjectId,
     social: { type: Number, max: 10 },
     technical:  { type: Number, max: 10 },
