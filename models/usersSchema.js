@@ -7,7 +7,7 @@ const userSchema = new Schema({
     name: String,
     department: String, enum: ["IT", "Management", "HR"],
     position: String, enum: ["entry-level", "middle management", "executive"],
-    id: Schema.Types.ObjectId
+    //id: ObjectId
 })
 
 const User = mongoose.model('User', userSchema) 

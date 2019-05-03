@@ -3,18 +3,22 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+<<<<<<< HEAD
 
+=======
+const mongoose = require('mongoose');
+>>>>>>> cc73dbd7a0f3eda01114dc3b5d5fed953bf131e9
 
 // Session and Passport modules
 const session = require("express-session");
 const flash = require("connect-flash");
-const passport = require("./config/passport-config");  // passport module setup and initial load
-const passportStrategySetup = require('./config/passport-local-strategy');
-const config = require('./config/config');
+//const passport = require("./config/passport-config");  // passport module setup and initial load
+//const passportStrategySetup = require('./config/passport-local-strategy');
+//const config = require('./config/config');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const passportRouter = require("./routes/passportRouter");
+//const passportRouter = require("./routes/passportRouter");
 
 mongoose
   .connect('mongodb://localhost/360-project', {useNewUrlParser: true})
@@ -36,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+/*
 app.use(session({
   secret: config.SESSION_KEY,
   resave: false,
@@ -57,10 +61,10 @@ app.use(passport.session());
 // allow our routes to use FLASH MESSAGES – feedback messages before redirects
 // (flash messages need sessions to work)
 app.use(flash());
-
+*/
 // Router
 app.use('/', indexRouter);
-app.use('/', passportRouter);
+//app.use('/', passportRouter);
 app.use('/users', usersRouter);
 
 // Error handling
