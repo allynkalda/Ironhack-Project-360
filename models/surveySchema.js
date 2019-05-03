@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
+const user = require('./usersSchema')
 
 const Schema = mongoose.Schema;
 
 
 const surveySchema = new Schema({
-	evaluator: Schema.Types.ObjectId,
-    evaluated: Schema.Types.ObjectId,
+	evaluator: user,
+    evaluated: ObjectId,
     social: { type: Number, max: 10 },
     technical:  { type: Number, max: 10 },
     organizational: { type: Number, max: 10 },
