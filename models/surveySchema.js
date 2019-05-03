@@ -3,7 +3,6 @@ const user = require('./usersSchema')
 
 const Schema = mongoose.Schema
 
-
 const surveySchema = new Schema({
   evaluator: userId,
   evaluated: ObjectId,
