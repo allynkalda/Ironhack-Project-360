@@ -1,8 +1,8 @@
-<h2>Signup</h2>
-<form action="/signup" method="POST" id="form-container">
+<h2>Sign Up</h2>
+<form action="/signup" method="POST" id="form-container" enctype="multipart/form-data">
   <label for="username">Username</label>
   <input id="username" type="text" name="username" placeholder="Your username">
-  <br><br>
+  <br>
   <label for="password">Password</label>
   <input id="password" type="password" name="password" placeholder="Your password">
   <br>
@@ -17,6 +17,9 @@
   <br>
   <label for="position">Position</label>
   <input id="position" type="text" name="position" placeholder="Your position">
+  <br>
+  <label for="image">Profile photo</label>
+  <input id="image" type="file" name="image" placeholder="Your position">
   <br>
   <button type="submit">Create account</button>
   {{#if message}}

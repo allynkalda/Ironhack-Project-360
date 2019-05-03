@@ -1,7 +1,8 @@
 const express = require('express')
 const passportRouter = express.Router()
-// Require user model
+// Require user model and config for cloudinary
 const User = require('../models/usersSchema')
+const parser = require('../config/cloudinary')
 // Add bcrypt to encrypt passwords
 const bcrypt = require('bcrypt')
 const bcryptSalt = 10
@@ -23,7 +24,8 @@ passportRouter.get('/signup', (req, res, next) => {
   res.render('passport/signup')
 })
 
-passportRouter.post('/signup', (req, res, next) => {
+passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
+  const image = req.file.secure_url
   const { username, password, firstName, lastName, department, position } = req.body
 
   if (username === '' || password === '') {
@@ -41,7 +43,7 @@ passportRouter.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt)
       const hashPass = bcrypt.hashSync(password, salt)
 
-      const newUser = new User({ username, firstName, lastName, department, position, password: hashPass })
+      const newUser = new User({ username, image, firstName, lastName, department, position, password: hashPass })
 
       newUser.save((err) => {
         if (err) res.render('/signup', { message: 'Something went wrong' })
@@ -53,7 +55,7 @@ passportRouter.post('/signup', (req, res, next) => {
 
 const ensureLogin = require('connect-ensure-login')
 
-passportRouter.get('/private-page', ensureLogin.ensureLoggedIn(), (req, res) => {
+passportRouter.get('/private', ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render('passport/private', { user: req.user })
 })
 
