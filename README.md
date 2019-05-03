@@ -90,7 +90,7 @@ Generate seed.js file.
 Link it with Json Server and PostMan.
 Create main hbs files and link them.
 CSS.
-...
+
 
 Links
 

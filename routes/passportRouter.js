@@ -14,8 +14,8 @@ passportRouter.get('/login', (req, res, next) => {
 })
 
 passportRouter.post('/login', passport.authenticate('local', {
-  successRedirect: 'passport/login',
-  failureRedirect: 'error',
+  successRedirect: '/directory',
+  failureRedirect: 'passport/login',
   passReqToCallback: true
 }))
 
@@ -24,7 +24,7 @@ passportRouter.get('/signup', (req, res, next) => {
 })
 
 passportRouter.post('/signup', (req, res, next) => {
-  const { username, password, firstName, lastName, department, position } = req.body
+  const { username, password } = req.body
 
   if (username === '' || password === '') {
     res.render('passport/signup', { message: 'Indicate username and password' })
@@ -41,11 +41,11 @@ passportRouter.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt)
       const hashPass = bcrypt.hashSync(password, salt)
 
-      const newUser = new User({ username, firstName, lastName, department, position, password: hashPass })
+      const newUser = new User({ username, password: hashPass })
 
       newUser.save((err) => {
-        if (err) res.render('/signup', { message: 'Something went wrong' })
-        else res.redirect('/login')
+        if (err) res.render('passport/signup', { message: 'Something went wrong' })
+        else res.redirect('/directory')
       })
     })
     .catch(error => next(error))
@@ -53,8 +53,8 @@ passportRouter.post('/signup', (req, res, next) => {
 
 const ensureLogin = require('connect-ensure-login')
 
-passportRouter.get('/private-page', ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render('passport/private', { user: req.user })
+passportRouter.get('/directory', ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render('directory', { user: req.user })
 })
 
 module.exports = passportRouter
