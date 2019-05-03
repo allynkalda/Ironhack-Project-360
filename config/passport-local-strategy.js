@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/usersSchema')
 
 // Setup for `passport.authenticate` and it's use during the authentication of the user (commonly during the login)
-// done is always passed as the last parameter 
+// done is always passed as the last parameter
 const localStrategy = new LocalStrategy(
   { passReqToCallback: true },
   (req, username, password, done) => {
