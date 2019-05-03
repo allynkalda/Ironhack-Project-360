@@ -3,11 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-<<<<<<< HEAD
-
-=======
 const mongoose = require('mongoose');
->>>>>>> cc73dbd7a0f3eda01114dc3b5d5fed953bf131e9
 
 // Session and Passport modules
 const session = require("express-session");
