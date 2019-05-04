@@ -14,6 +14,7 @@ const config = require('./config/config')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
+const resultsRouter = require('./routes/charts')
 const passportRouter = require('./routes/passportRouter')
 
 mongoose
@@ -62,7 +63,7 @@ app.use(flash())
 app.use('/', indexRouter)
 // app.use('/', usersRouter);
 app.use('/', usersRouter)
-// app.use('/', passportRouter);
+app.use('/', resultsRouter)
 app.use('/', passportRouter)
 
 // Error handling
