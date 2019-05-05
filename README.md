@@ -1,29 +1,28 @@
-##360HR
+<h1>360HR</h1>
 
-##Short description
-
+<h2>Short description</h2>
+</br>
 The mobile app allows teams to perform 360 tests so the team mates can provide constructive review of peers, managers and other people in their company. The user has to complete the same survey in four regular intervals within a month for every person participating in the evaluation. This allows for continuous feedback.
-
+</br>
 The app will utilize a Chart API to visualize the data on the results of their reviews which will make the information easily understandable by the user.
-
-##MVP
-
-Basic authentication in a log in page
-Users can input data and image in sign in page
-Users can submit their answers to the survey provided to them
-Users can see the aggregate results of the survey answered by his/her peers 
-
-##Backlog
-
-Token System.
-Google Signup / login
-Reminder notifications
-Check punctuations given.
-Get results in the chart by Date/ Position/ ID
+</br>
+<h2>MVP</h2>
+</br>
+Basic authentication in a log in page</br>
+Users can input data and image in sign in page</br>
+Users can submit their answers to the survey provided to them</br>
+Users can see the aggregate results of the survey answered by his/her peers
+</br>
+<h2>Backlog</h2>
+</br>
+Token System.</br>
+Google Signup / login</br>
+Reminder notifications</br>
+Check punctuations given.</br>
+Get results in the chart by Date/ Position/ ID</br>
 Add rounds (new survey).
-
-
-##Data Structure
+</br>
+<h2>Data Structure</h2>
 
 User { 
 Name: String
