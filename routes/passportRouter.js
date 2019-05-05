@@ -24,14 +24,9 @@ passportRouter.get('/signup', (req, res, next) => {
   res.render('passport/signup')
 })
 
-<<<<<<< HEAD
-passportRouter.post('/signup', (req, res, next) => {
-  const { username, password } = req.body
-=======
 passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
   const image = req.file.secure_url
   const { username, password, firstName, lastName, department, position } = req.body
->>>>>>> d35428e5963e3244f5489f20d5dc59c06142fb2f
 
   if (username === '' || password === '') {
     res.render('passport/signup', { message: 'Indicate username and password' })
@@ -48,11 +43,7 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt)
       const hashPass = bcrypt.hashSync(password, salt)
 
-<<<<<<< HEAD
-      const newUser = new User({ username, password: hashPass })
-=======
       const newUser = new User({ username, image, firstName, lastName, department, position, password: hashPass })
->>>>>>> d35428e5963e3244f5489f20d5dc59c06142fb2f
 
       newUser.save((err) => {
         if (err) res.render('passport/signup', { message: 'Something went wrong' })
@@ -64,13 +55,8 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
 
 const ensureLogin = require('connect-ensure-login')
 
-<<<<<<< HEAD
-passportRouter.get('/directory', ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render('directory', { user: req.user })
-=======
 passportRouter.get('/private', ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render('passport/private', { user: req.user })
->>>>>>> d35428e5963e3244f5489f20d5dc59c06142fb2f
 })
 
 module.exports = passportRouter
