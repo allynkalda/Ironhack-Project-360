@@ -10,7 +10,6 @@ const bcryptSalt = 10
 const passport = require('passport')
 
 passportRouter.get('/login', (req, res, next) => {
-  console.log('inside here')
   res.render('passport/login')
 })
 
@@ -55,8 +54,8 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
 
 const ensureLogin = require('connect-ensure-login')
 
-passportRouter.get('/private', ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render('passport/private', { user: req.user })
+passportRouter.get('/directory', ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render('directory', { user: req.user })
 })
 
 module.exports = passportRouter
