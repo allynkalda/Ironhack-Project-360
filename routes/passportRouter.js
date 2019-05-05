@@ -55,7 +55,7 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
 const ensureLogin = require('connect-ensure-login')
 
 passportRouter.get('/directory', ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render('directory', { user: req.user })
+  res.render('directory')
 })
 
 module.exports = passportRouter
