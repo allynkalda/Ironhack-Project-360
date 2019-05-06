@@ -4,8 +4,8 @@ const user = require('./usersSchema')
 const Schema = mongoose.Schema
 
 const surveySchema = new Schema({
-  evaluator: mongoose.Schema.Types.ObjectId,
-  evaluated: mongoose.Schema.Types.ObjectId,
+  evaluator: String,
+  evaluated: String,
   social: { type: Number, max: 10 },
   technical: { type: Number, max: 10 },
   organizational: { type: Number, max: 10 },
