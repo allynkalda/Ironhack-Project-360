@@ -28,9 +28,7 @@ router.get('/users', checkIfAuthenticated, function (req, res, next) {
 router.get('/survey/:id', function (req, res, next) {
   const survey = {
     evaluator: req.user.id,
-    evaluated: req.params.id,
-    technical: 0,
-    social: 0
+    evaluated: req.params.id
   }
 
   Survey.create(survey)
@@ -43,7 +41,7 @@ router.get('/survey/:id', function (req, res, next) {
 })
 
 /* POST Survey page. */
-router.post('/survey1/:id', function (req, res, next) {
+router.post('/survey/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
   const { numbers } = req.body
   const id = req.params.id
@@ -51,14 +49,96 @@ router.post('/survey1/:id', function (req, res, next) {
   console.log(numbers)
 
   Survey.findOneAndUpdate({ _id: id }, { technical: numbers })
-    .then((result) => console.log('Tech field successfuly updated', result))
-  res.render('survey/survey2')
-    .catch(err => console.log(err))
+    .then((result) => {
+      res.render('survey/survey2', { id: result._id })
+    })
+    .catch((err) => console.log(err))
 })
 
-/* GET Survey2 page. */
-router.get('/survey12s', function (req, res, next) {
-  res.render('survey/survey2')
+// /* GET Survey page. */
+// router.get('/survey1/:id', function (req, res, next) {
+//   res.render('survey/survey2')
+//   // console.log(id)
+// })
+
+/* POST Survey1 page. */
+router.post('/survey1/:id', function (req, res, next) {
+  console.log('survey post id', req.params.id)
+  const { numbers } = req.body
+  const id = req.params.id
+  console.log(id)
+  console.log(numbers)
+
+  Survey.findOneAndUpdate({ _id: id }, { social: numbers })
+    .then((result) => {
+      console.log(result)
+      res.render('survey/survey3', { id: result._id })
+    })
+    .catch((err) => console.log(err))
+})
+
+/* POST Survey2 page. */
+router.post('/survey2/:id', function (req, res, next) {
+  console.log('survey post id', req.params.id)
+  const { numbers } = req.body
+  const id = req.params.id
+  console.log(id)
+  console.log(numbers)
+
+  Survey.findOneAndUpdate({ _id: id }, { leadership: numbers })
+    .then((result) => {
+      console.log(result)
+      res.render('survey/survey4', { id: result._id })
+    })
+    .catch((err) => console.log(err))
+})
+
+/* POST Survey3 page. */
+router.post('/survey3/:id', function (req, res, next) {
+  console.log('survey post id', req.params.id)
+  const { numbers } = req.body
+  const id = req.params.id
+  console.log(id)
+  console.log(numbers)
+
+  Survey.findOneAndUpdate({ _id: id }, { organizational: numbers })
+    .then((result) => {
+      console.log(result)
+      res.render('survey/survey5', { id: result._id })
+    })
+    .catch((err) => console.log(err))
+})
+
+/* POST Survey4 page. */
+router.post('/survey4/:id', function (req, res, next) {
+  console.log('survey post id', req.params.id)
+  const { numbers } = req.body
+  const id = req.params.id
+  console.log(id)
+  console.log(numbers)
+
+  Survey.findOneAndUpdate({ _id: id }, { motivation: numbers })
+    .then((result) => {
+      console.log(result)
+      res.render('survey/survey6', { id: result._id })
+    })
+    .catch((err) => console.log(err))
+})
+
+/* POST Survey4 page. */
+router.post('/survey5/:id', function (req, res, next) {
+  console.log('survey post id', req.params.id)
+  const { answer } = req.body
+  const id = req.params.id
+  console.log(id)
+  console.log(answer)
+
+  Survey.findOneAndUpdate({ _id: id }, { review: answer })
+    .then((result) => {
+      console.log(result)
+      res.render('survey/survey7', { id: result._id })
+    })
+    .catch((err) => console.log(err))
 })
 
 module.exports = router
