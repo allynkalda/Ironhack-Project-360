@@ -14,7 +14,7 @@ const config = require('./config/config')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
-const resultsRouter = require('./routes/charts')
+const resultsRouter = require('./routes/results')
 const passportRouter = require('./routes/passportRouter')
 
 mongoose
