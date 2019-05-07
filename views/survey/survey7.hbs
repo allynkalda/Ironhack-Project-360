@@ -4,4 +4,11 @@
     {{/each}}
 </head>
 <h2>You've completed the 360 survey!</h2>
-<a href="/directory"><button><class="next-button">HOME</button></a>
+<h1>Make sure you do not want to change anything and send the answers!</h1>
+
+<form action="/sent/{{id}}" method="POST">
+  
+  <button href = "/sent"class="submit-button" type="submit">SUBMIT</button>
+</form>
+
+<a href="/sent"><button><class="next-button">Send</button></a>
