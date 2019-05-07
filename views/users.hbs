@@ -1,4 +1,16 @@
+<!doctype html>
+<html lang="en" class="front-page">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
+</head>
+<body class="front-page">
+<div class="container">
 <h1>Pick a colleague to survey</h1>
 {{#each users}}
 <h3><a href="/survey/{{this._id}}">{{this.firstName}}</a></h3>
 {{/each}}
+</div>
+</body>
