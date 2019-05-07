@@ -35,6 +35,10 @@ router.get('/results', (req, res, next) => {
         }
         return chartArray(surveyNum)
       }
+
+
+
+      
      res.send(socialResults(1))
     })
     .catch((err) => console.log(err))
