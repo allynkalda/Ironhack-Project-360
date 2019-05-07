@@ -2,6 +2,7 @@
 const baseURL = 'http://localhost:3007'
 const canvas = document.querySelector('canvas')
 
+
 window.addEventListener('load', () => {
   printCharts()
 })
