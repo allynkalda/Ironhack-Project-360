@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const Survey = require('../models/surveySchema')
+const config = require('./../config/config')
 
-mongoose.connect(`mongodb://localhost/360-project`)
+mongoose.connect(config.DB_URL)
 
 const survey = [
   {
