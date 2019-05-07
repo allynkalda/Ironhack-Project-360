@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const User = require('../models/usersSchema')
+const config = require('./../config/config')
 
-mongoose.connect(`mongodb://localhost/360-project`)
+mongoose.connect(config.DB_URL)
 
 const userList = [
   {

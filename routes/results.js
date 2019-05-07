@@ -7,7 +7,7 @@ router.get('/display', (req, res, next) => {
 })
 
 router.get('/results', (req, res, next) => {
-  Surveys.find({ evaluated: req.user.id }, 'social technical organizational leadership motivation round surveyNum review')
+  Surveys.find({ evaluated: req.user.id }, 'social technical organizational leadership motivation round surveyNum')
     .then((data) => { 
       const socialResults = (surveyNum) => {
         let sortBySurveyNumRound = (surveyNum, round) => {

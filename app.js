@@ -18,7 +18,7 @@ const resultsRouter = require('./routes/results')
 const passportRouter = require('./routes/passportRouter')
 
 mongoose
-  .connect('mongodb://localhost/360-project', { useNewUrlParser: true })
+  .connect(config.DB_URL, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database 360-project`)
   })

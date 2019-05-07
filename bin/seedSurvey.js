@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const Survey = require('../models/surveySchema')
+const config = require('./../config/config')
 
-mongoose.connect(`mongodb://localhost/360-project`)
+mongoose.connect(config.DB_URL)
 
 // just for testing the charts, i have created this collection with
 // always the same evaluator, john(since the schema asks for an id),
