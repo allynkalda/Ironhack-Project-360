@@ -1,11 +1,24 @@
 <h1>Results</h1>
 
 {{#if canvas}}
-  <canvas id="socialChart" width="400" height="400"></canvas>
-  <canvas id="technicalChart" width="400" height="400"></canvas>
-  <canvas id="organizationalChart" width="400" height="400"></canvas>
-  <canvas id="leadershipChart" width="400" height="400"></canvas>
-  <canvas id="motivationChart" width="400" height="400"></canvas>
+  <div id = 'graffics'>
+    <div>
+      <canvas id="socialChart" width="300px" height = "300px"></canvas>
+    </div>
+    <div>
+      <canvas id="technicalChart"  width="300px" height = "300px" ></canvas>
+    </div>
+    <div>
+      <canvas id="organizationalChart" ></canvas>
+    </div>
+    <div>
+      <canvas id="leadershipChart" ></canvas>
+    </div>
+    <div>
+      <canvas id="motivationChart" ></canvas>
+    </div>
   <script type="text/javascript" src="js/charts.js"></script>
+  <script type="text/javascript" src="stylesheets/style.css"></script>
+  </div>
 {{/if}}
 

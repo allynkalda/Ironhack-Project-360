@@ -1,5 +1,4 @@
 
-
 const baseURL = 'http://localhost:3007'
 const canvas = document.querySelector('canvas')
 
@@ -38,10 +37,14 @@ function printCharts () {
         }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         scales: {
           yAxes: [{
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
+              suggestedMax: 10
+              
             }
           }]
         }
@@ -70,10 +73,12 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: true,
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMax: 10
               }
             }]
           }
@@ -105,7 +110,8 @@ function printCharts () {
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMax: 10
               }
             }]
           }
@@ -137,7 +143,8 @@ function printCharts () {
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMax: 10
               }
             }]
           }
@@ -169,7 +176,8 @@ function printCharts () {
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMax: 10
               }
             }]
           }

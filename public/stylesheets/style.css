@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+#graffics div{
+  position: relative;
+  height: 100%;
+  width: 99%;
+  background-color: white;
+  border: black 2px solid;
+  margin: 2% auto;
+}
