@@ -1,20 +1,32 @@
+<!doctype html>
+<html lang="en" class="front-page">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
+</head>
+<body class="front-page">
+<div class="container">
 <h2>Log in</h2>
 <form action="/login" method="POST">
   <div>
     <label for="username">Username:</label>
+    </br>
     <input type="text" name="username">
   </div>
   <div>
     <label for="password">Password:</label>
+    </br>
     <input type="password" name="password">
-  </div>
-    
+  </div>  
     {{#if message}}
       <div class="error-message">{{ message }}</div>
     {{/if}}
-  
   <div>
-    <input type="submit" value="Log In">
+    <button class="front-buttons" type="submit">Log in</button>
+  </div>
+  </body>
   </div>
 
 </form>
