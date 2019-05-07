@@ -35,7 +35,6 @@ router.get('/survey/:id', function (req, res, next) {
     .then((newSurvey) => {
       console.log('Survey 0 - newSurvey', newSurvey)
       res.render('survey/survey1', { id: newSurvey._id })
-      // console.log(id)
     })
     .catch((err) => console.log(err))
 })
@@ -54,12 +53,6 @@ router.post('/survey/:id', function (req, res, next) {
     })
     .catch((err) => console.log(err))
 })
-
-// /* GET Survey page. */
-// router.get('/survey1/:id', function (req, res, next) {
-//   res.render('survey/survey2')
-//   // console.log(id)
-// })
 
 /* POST Survey1 page. */
 router.post('/survey1/:id', function (req, res, next) {

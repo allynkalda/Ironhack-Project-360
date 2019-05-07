@@ -109,7 +109,6 @@ input[type="file"] {
   text-align: center;
   font-size: 12px;
 }
-
 #graffics div{
   position: relative;
   height: 100%;
@@ -117,4 +116,9 @@ input[type="file"] {
   background-color: white;
   border: black 2px solid;
   margin: 2% auto;
+}
+.peer-photos {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
