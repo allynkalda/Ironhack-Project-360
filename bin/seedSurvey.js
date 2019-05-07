@@ -129,7 +129,7 @@ const surveyList = [
     round: 4,
     surveyNum: 1,
     timestamps: true
-},
+  },
   { evaluator: '5ccc670851623152f23e5df1', // john
     evaluated: '5ccc67e9f4197e531b218766', // Jon
     social: 8,
