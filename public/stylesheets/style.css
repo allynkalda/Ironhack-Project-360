@@ -83,10 +83,11 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #60695C;
+	background-color: #CAC4CE;
 	border: none;
   font-size: 16px;
   color: white;
+  margin-bottom: 20px;
 }
 .signup {
   font-size: 1em;
