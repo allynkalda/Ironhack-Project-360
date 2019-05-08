@@ -19,6 +19,11 @@ passportRouter.post('/login', passport.authenticate('local', {
   passReqToCallback: true
 }))
 
+passportRouter.get('/logout', (req, res) => {
+  req.logout()
+  res.redirect('/login')
+})
+
 passportRouter.get('/signup', (req, res, next) => {
   res.render('passport/signup')
 })

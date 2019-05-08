@@ -8,8 +8,12 @@
 </head>
 <body class="front-page">
 <div class="container">
-<img class="logo-photo" src="/images/thumbs-up.png" ></img>
-<h3>You've completed the 360 survey!</h3>
-<a href="/directory"><button type="button" class="front-buttons">HOME</button></a>
+<h1>Reviews</h1>
+{{#each data}}
+<div class="review-box">
+<p class="review-text">{{this.review}}</p>
+</div>
+{{/each}}
+<a href="/display"><button type="button" class="back-buttons">BACK</button></a>
 </div>
 </body>

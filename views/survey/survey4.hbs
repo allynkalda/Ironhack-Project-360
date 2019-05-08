@@ -1,26 +1,38 @@
-<head>
-    {{#each css}}
-        <link rel="stylesheet" href="/css/{{this}}">
-    {{/each}}
+<!doctype html>
+<html lang="en" class="front-page">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
 </head>
+<body class="front-page">
+<div class="container">
 <h2>Organizational skills</h2>
-<form action="/survey3/{{id}}" method="POST">
-  <label for="">How would you rate your colleague's social skills?</label>
+<form action="/survey3/{{id}}"  method="POST">
+  <h3>How would you rate your colleague's organizational skills?</h3>
   </br>
-  <input type="radio" name="numbers" value="5" >
-  <label for="five">Amazing</label>
+  <div class="input-survey">
+  <input type="radio"  name="numbers" value="5">
+  <label class="surveys" for="5">Amazing</label>
    </br>
-  <input type="radio" name="numbers" value="4" >
-  <label for="four">Great</label>
+  <input type="radio"  name="numbers" value="4">
+  <label class="surveys" for="4">Great</label>
    </br>
-  <input type="radio" name="numbers" name="three" value="3" >
-  <label for="three">Satisfactory</label>
+  <input type="radio"  name="numbers" value="3">
+  <label class="surveys" for="3">Satisfactory</label>
    </br>
-  <input type="radio" name="numbers" value="2" >
-  <label for="two">Needs improvement</label>
+  <input type="radio" name="numbers" value="2">
+  <label class="surveys" for="2">Needs improvement</label>
    </br>
-  <input type="radio" name="numbers" value="1" >
-  <label for="one">Poor</label>
+  <input type="radio" name="numbers" value="1">
+  <label class="surveys" for="one">Poor</label>
    </br>
-  <button class="submit-button" type="submit">SUBMIT</button>
+   </div>
+  <div class="button-center">
+  <button class="front-buttons" type="submit">SUBMIT</button>
 </form>
+  <a href="/survey2/{{id}}"><button type=button class="back-buttons">BACK</button></a>
+  </div>
+</div>
+</body> 
