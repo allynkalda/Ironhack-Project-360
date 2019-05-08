@@ -1,8 +1,213 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-a {
-  color: #00B7FF;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  font-family: 'Open Sans', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.front-page {
+  background-color: #FEFFBE;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.logo-photo {
+  padding: 50px 0px 40px 0px;
+  width: 250px;
+}
+h1, h2 {
+  font-size: 30px;
+  padding: 30px 30px 20px 30px;
+  color: #586054;
+  text-align: center;
+  line-height: 50px;
+}
+.front-buttons {
+  margin-top: 10px;
+	height: 40px;
+	width: 250px;
+	border-radius: 10px;
+	background-size: 42px 42px;
+	background-color: #60695C;
+	border: none;
+  font-size: 16px;
+  color: white;
+}
+.back-buttons {
+  margin-top: 10px;
+	height: 40px;
+	width: 250px;
+	border-radius: 10px;
+	background-size: 42px 42px;
+	background-color: #CAC4CE;
+	border: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 20px;
+}
+.signup {
+  font-size: 1em;
+}
+label {
+  font-size: 10px;
+  color: #586054;
+  text-align: center;
+}
+input[type="text"] {
+  font-family: monospace;
+  padding-left: 20px;
+  font-size: 15px;
+  margin: 5px 0px 5px 0px;
+  height: 20px;
+  width: 230px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 20px;
+}
+input[type="password"] {
+  font-family: monospace;
+  padding-left: 20px;
+  font-size: 15px;
+  margin: 5px 0px 5px 0px;
+  height: 20px;
+  width: 230px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 20px;
+}
+input[type="file"] {
+  font-family: monospace;
+  text-align: center;
+  padding-left: 20px;
+  font-size: 10px;
+}
+.account-message {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+#graffics div{
+  position: relative;
+  height: 100%;
+  width: 99%;
+  background-color: white;
+  border: black 2px solid;
+  margin: 2% auto;
+}
+.peer-photos {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  line-height: 30px;
+}
+.surveys {
+  font-size: 15px;
+}
+.button-center {
+  text-align: center;
+}
+.input-survey {
+  padding-left: 80px;
+  padding-bottom: 30px;
+}
+.text-input {
+  padding-left: 30px;
+}
+#text-input {
+  height: 30px;
+}
+.user-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.every-photo {
+  padding-top: 20px;
+  height: 130px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.name-survey {
+  text-align: center;
+}
+.person-buttons {
+  margin-top: 10px;
+	height: 35px;
+	width: 80px;
+	border-radius: 10px;
+	background-size: 42px 42px;
+	background-color: #F6AE2D;
+	border: none;
+  font-size: 15px;
+  color: #60695C;
+}
+textarea {
+  font-size: 15px;
+  font-family: 'Open-Sans';
+}
+.review-box {
+  height: 40px;
+  width: 200px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.review-text {
+  font-size: 15px;
+  
 }

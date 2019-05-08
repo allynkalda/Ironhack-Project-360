@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="front-page">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
+</head>
+<body class="front-page">
+<div class="container">
+<form action="/survey5/{{id}}" method="POST">
+  <h3>How can your colleague improve his or her work?</h3>
+  <div class="text-input">
+  <br>
+  <textarea name="answer" cols="31" rows="9" value="answer"></textarea>
+  <br>
+   </div>
+  <div class="button-center">
+  <button class="front-buttons" type="submit">SUBMIT</button>
+</form>
+  <a href="/survey4/{{id}}"><button type="button" class="back-buttons">BACK</button></a>
+  </div>
+</div>
+</body> 

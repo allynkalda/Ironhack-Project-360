@@ -8,14 +8,12 @@
 </head>
 <body class="front-page">
 <div class="container">
-<div class="logo">
-<img class="logo-photo" src="/images/360.png" ></img>
+<h1>Reviews</h1>
+{{#each data}}
+<div class="review-box">
+<p class="review-text">{{this.review}}</p>
 </div>
-<div class="options">
-<a href="/signup"><button class="front-buttons">Sign up</button></a>
-</br>
-<a href="/login"><button class="front-buttons">Login</button></a>
-</div>
+{{/each}}
+<a href="/display"><button type="button" class="back-buttons">BACK</button></a>
 </div>
 </body>
-</html>

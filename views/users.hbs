@@ -7,15 +7,17 @@
   <link rel="stylesheet" type="text/css" href="../public/style.css">
 </head>
 <body class="front-page">
-<div class="container">
-<div class="logo">
-<img class="logo-photo" src="/images/360.png" ></img>
+
+<h1>Who do you want to review today?</h1>
+<div class="user-box">
+{{#each users}}
+<div class="every-photo"> 
+<img class="peer-photos" src="{{this.image}}">
+<div class="name-survey">
+<h4><a href="/survey/{{this._id}}"><button type="button" class="person-buttons">
+{{this.firstName}}</button></a></h4>
 </div>
-<div class="options">
-<a href="/signup"><button class="front-buttons">Sign up</button></a>
-</br>
-<a href="/login"><button class="front-buttons">Login</button></a>
 </div>
+{{/each}}
 </div>
 </body>
-</html>

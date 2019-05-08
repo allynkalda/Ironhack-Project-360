@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="front-page">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
+</head>
+<body class="front-page">
+<div class="container">
+
+<h1>Results</h1>
+
+{{#if canvas}}
+  <div id = 'graffics'>
+    <div>
+      <canvas id="socialChart" width="300px" height = "300px"></canvas>
+    </div>
+    <div>
+      <canvas id="technicalChart"  width="300px" height = "300px" ></canvas>
+    </div>
+    <div>
+      <canvas id="organizationalChart" ></canvas>
+    </div>
+    <div>
+      <canvas id="leadershipChart" ></canvas>
+    </div>
+    <div>
+      <canvas id="motivationChart" ></canvas>
+    </div>
+  <script type="text/javascript" src="js/charts.js"></script>
+  <script type="text/javascript" src="stylesheets/style.css"></script>
+  </div>
+{{/if}}
+<a href="/reviews"><button type="button" class="front-buttons">SEE REVIEWS</button></a>
+<a href="/directory"><button type="button" class="back-buttons">BACK</button></a>
+</div>
+
+</body>
+
