@@ -8,9 +8,9 @@
 </head>
 <body class="front-page">
 <div class="container">
-<h1>Who do you want to review today?</h1>
-{{#each users}}
-<img class="peer-photos" src="{{this.image}}"><h3><a href="/survey/{{this._id}}">{{this.firstName}}</a></h3>
+<h1>Reviews</h1>
+{{#each data}}
+<p>{{this.review}}</p>
 {{/each}}
 </div>
 </body>

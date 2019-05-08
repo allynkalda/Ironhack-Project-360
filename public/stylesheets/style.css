@@ -48,7 +48,7 @@ table {
   background-color: #FEFFBE;
 }
 .container {
-  display: flex; /* or inline-flex */
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;

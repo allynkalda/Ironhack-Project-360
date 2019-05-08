@@ -158,4 +158,11 @@ router.get('/results', (req, res, next) => {
     .catch((err) => console.log(err))
 })
 
+router.get('/reviews', (req, res, next) => {
+  console.log(req.user.id)
+  Surveys.find({ evaluated: req.user.id })
+    .then((data) => res.render('reviews', { data }))
+    .catch((err) => console.log(err))
+})
+
 module.exports = router
