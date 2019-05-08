@@ -166,15 +166,11 @@ router.post('/survey5/:userId&id', function (req, res, next) {
 //   const surveyId = req.params.id
 //   const evaluated = req.params.userId
 
-
 //   Survey.findMany({ evaluator: evaluator})
 //     .then((answeredSurveys) => {
 //       answeredSurveys.filter((obj)=>{
-//         obj.evaluated === 
-//       })
-
-
-      
+//         obj.evaluated === evaluated
+//       }) 
 //       res.render('survey/survey8')
 //     })
 //     .catch((err) => console.log(err))
