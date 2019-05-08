@@ -151,7 +151,6 @@ router.get('/results', (req, res, next) => {
           })
         return reviews          
       }
-
       const chartsData = [socialResults(1), techResults(1), organResults(1), leaderResults(1), motivationResults(1), reviews(1)]
       console.log(chartsData)
       res.send(chartsData)
