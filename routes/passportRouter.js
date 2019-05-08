@@ -21,7 +21,7 @@ passportRouter.post('/login', passport.authenticate('local', {
 
 passportRouter.get('/logout', (req, res) => {
   req.logout()
-  res.redirect('/login')
+  res.redirect('/')
 })
 
 passportRouter.get('/signup', (req, res, next) => {

@@ -28,9 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  height: 100vh;
   position:relative;
-  padding-bottom: 100px;
 }
 ol, ul {
 	list-style: none;
@@ -49,6 +47,7 @@ table {
 }
 .front-page {
   background-image: linear-gradient(to top, white , rgb(66, 174, 246));
+  height:100vh;
 }
 .results-back{
   background-color:rgb(156, 221, 251);
@@ -66,7 +65,7 @@ table {
 }
 .logo-photo {
   padding: 50px 0px 40px 0px;
-  width: 250px;
+  width: 280px;
 }
 h1, h2 {
   font-size: 30px;
