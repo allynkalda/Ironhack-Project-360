@@ -153,13 +153,17 @@ input[type="file"] {
   font-size: 10px;
 }
 .account-message {
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
   font-size: 15px;
   font-weight: 600;
 }
 .account-message a{
  text-decoration: none;
+}
+.error-message{
+  font-size: 15px;
+  color:red;
 }
 #graffics div{
   position: relative;
@@ -240,7 +244,6 @@ textarea {
 }
 .review-text {
   font-size: 15px;
-  
 }
 nav{
   height:50px;
