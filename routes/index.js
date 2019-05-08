@@ -33,16 +33,6 @@ router.get('/survey/:id', function (req, res, next){
   
   /*create the newSurveyObj with the round*/
 
-<<<<<<< HEAD
-  Survey.create(survey)
-    .then((newSurvey) => {
-      console.log('Survey 0 - newSurvey', newSurvey)
-      res.render('survey/survey1', { id: newSurvey._id })
-    })
-    .catch((err) => console.log(err))
-
-  console.log(survey.evaluator)
-=======
   Survey.find({evaluator: req.user.id, evaluated: req.params.id})
     .then((result) => {
       console.log('these are the surveys', result);
@@ -63,7 +53,6 @@ router.get('/survey/:id', function (req, res, next){
     })
     .catch((err) => console.log(err))
 
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
 })
 
 /* POST Survey page. */
@@ -183,15 +172,12 @@ router.post('/survey4/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
-<<<<<<< HEAD
 /* GET Survey5 page. */
 router.get('/survey5/:id', function (req, res, next) {
   const id = req.params.id
   res.render('survey/survey6', { id })
 })
 
-=======
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
 /* POST Survey5 page. */
 router.post('/survey5/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
@@ -208,26 +194,4 @@ router.post('/survey5/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
-<<<<<<< HEAD
 module.exports = router
-=======
-/* POST round and surveyNum page. */
-//name=John+Doe&gender=male&family=5&city=kent&city=miami&
-// const evaluator = req.user.id
-// router.post('/sent/:id', function (req, res, next) {
-
-//   const evaluator = req.user.id
-//   const surveyId = req.params.id
-//   const evaluated = req.params.userId
-
-//   Survey.findMany({ evaluator: evaluator})
-//     .then((answeredSurveys) => {
-//       answeredSurveys.filter((obj)=>{
-//         obj.evaluated === evaluated
-//       }) 
-//       res.render('survey/survey8')
-//     })
-//     .catch((err) => console.log(err))
-// })
-module.exports = router
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
