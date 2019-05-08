@@ -37,6 +37,8 @@ router.get('/survey/:id', function (req, res, next) {
       res.render('survey/survey1', { id: newSurvey._id })
     })
     .catch((err) => console.log(err))
+
+  console.log(survey.evaluator)
 })
 
 /* POST Survey page. */

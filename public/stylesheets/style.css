@@ -98,6 +98,11 @@ input[type="text"] {
   padding-left: 20px;
   font-size: 15px;
 }
+input[type="password"] {
+  font-family: monospace;
+  padding-left: 20px;
+  font-size: 15px;
+}
 input[type="file"] {
   font-family: monospace;
   text-align: center;
