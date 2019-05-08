@@ -12,8 +12,8 @@ const surveySchema = new Schema({
   leadership: { type: Number, max: 10 },
   motivation: { type: Number, max: 10 },
   review: String,
-  round: { type: Number, max: 4 },
-  surveyNum: Number
+  round: { type: Number, max: 4, default: 0},
+  surveyNum: { type: Number, default: 1 }
 })
 
 const Survey = mongoose.model('Survey', surveySchema)

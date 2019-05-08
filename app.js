@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require('http-errors')
 const express = require('express')
 const path = require('path')
@@ -18,7 +19,7 @@ const resultsRouter = require('./routes/results')
 const passportRouter = require('./routes/passportRouter')
 
 mongoose
-  .connect(config.DB_URL, { useNewUrlParser: true })
+  .connect(process.env.MONGOLAB_BLUE_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database 360-project`)
   })
