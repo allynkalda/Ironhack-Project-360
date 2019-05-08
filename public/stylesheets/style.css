@@ -156,7 +156,11 @@ input[type="file"] {
 .account-message {
   padding-top: 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.account-message a{
+ text-decoration: none;
 }
 #graffics div{
   position: relative;
@@ -218,10 +222,10 @@ h3 {
 	width: 80px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #F6AE2D;
+	background-color:  rgb(98, 98, 98);
 	border: none;
-  font-size: 15px;
-  color: #60695C;
+  font-size: 20px;
+  color:white;
 }
 textarea {
   font-size: 15px;
