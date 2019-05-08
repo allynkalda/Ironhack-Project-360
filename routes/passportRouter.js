@@ -15,7 +15,7 @@ passportRouter.get('/login', (req, res, next) => {
 
 passportRouter.post('/login', passport.authenticate('local', {
   successRedirect: '/directory',
-  failureRedirect: 'passport/login',
+  failureRedirect: '/login',
   passReqToCallback: true
 }))
 
