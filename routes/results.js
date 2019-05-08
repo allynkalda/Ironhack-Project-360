@@ -161,7 +161,8 @@ router.get('/results', (req, res, next) => {
 router.get('/reviews', (req, res, next) => {
   console.log(req.user.id)
   Surveys.find({ evaluated: req.user.id })
-    .then((data) => res.render('reviews', { data }))
+    .then((data) => // console.log(data))
+      res.render('reviews', { data }))
     .catch((err) => console.log(err))
 })
 

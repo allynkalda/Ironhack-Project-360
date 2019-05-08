@@ -10,24 +10,29 @@
 <div class="container">
 <h2>Technical skills</h2>
 <form action="/survey/{{id}}"  method="POST">
-  <label for="">How would you rate your colleague's technical skills?</label>
+  <h3>How would you rate your colleague's technical skills?</h3>
   </br>
+  <div class="input-survey">
   <input type="radio"  name="numbers" value="5">
-  <label for="5">Amazing</label>
+  <label class="surveys" for="5">Amazing</label>
    </br>
   <input type="radio"  name="numbers" value="4">
-  <label for="4">Great</label>
+  <label class="surveys" for="4">Great</label>
    </br>
   <input type="radio"  name="numbers" value="3">
-  <label for="3">Satisfactory</label>
+  <label class="surveys" for="3">Satisfactory</label>
    </br>
   <input type="radio" name="numbers" value="2">
-  <label for="2">Needs improvement</label>
+  <label class="surveys" for="2">Needs improvement</label>
    </br>
   <input type="radio" name="numbers" value="1">
-  <label for="one">Poor</label>
+  <label class="surveys" for="one">Poor</label>
    </br>
-  <button class="submit-button" type="submit">SUBMIT</button>
+   </div>
+  <div class="button-center">
+  <button class="front-buttons" type="submit">SUBMIT</button>
 </form>
+  <a href="/users"><button type="button" class="back-buttons">BACK</button></a>
+  </div>
 </div>
 </body> 

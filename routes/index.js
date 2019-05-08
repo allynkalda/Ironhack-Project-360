@@ -56,6 +56,12 @@ router.post('/survey/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
+/* GET Survey1 page. */
+router.get('/survey1/:id', function (req, res, next) {
+  const id = req.params.id
+  res.render('survey/survey2', { id })
+})
+
 /* POST Survey1 page. */
 router.post('/survey1/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
@@ -70,6 +76,12 @@ router.post('/survey1/:id', function (req, res, next) {
       res.render('survey/survey3', { id: result._id })
     })
     .catch((err) => console.log(err))
+})
+
+/* GET Survey2 page. */
+router.get('/survey2/:id', function (req, res, next) {
+  const id = req.params.id
+  res.render('survey/survey3', { id })
 })
 
 /* POST Survey2 page. */
@@ -88,6 +100,12 @@ router.post('/survey2/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
+/* GET Survey3 page. */
+router.get('/survey3/:id', function (req, res, next) {
+  const id = req.params.id
+  res.render('survey/survey4', { id })
+})
+
 /* POST Survey3 page. */
 router.post('/survey3/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
@@ -102,6 +120,12 @@ router.post('/survey3/:id', function (req, res, next) {
       res.render('survey/survey5', { id: result._id })
     })
     .catch((err) => console.log(err))
+})
+
+/* GET Survey4 page. */
+router.get('/survey4/:id', function (req, res, next) {
+  const id = req.params.id
+  res.render('survey/survey5', { id })
 })
 
 /* POST Survey4 page. */
@@ -120,7 +144,13 @@ router.post('/survey4/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
-/* POST Survey4 page. */
+/* GET Survey5 page. */
+router.get('/survey5/:id', function (req, res, next) {
+  const id = req.params.id
+  res.render('survey/survey6', { id })
+})
+
+/* POST Survey5 page. */
 router.post('/survey5/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
   const { answer } = req.body

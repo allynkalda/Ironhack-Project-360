@@ -9,10 +9,16 @@
 <body class="front-page">
 <div class="container">
 <form action="/survey5/{{id}}" method="POST">
-  <p>How can your colleague improve his or her work?</p>
+  <h3>How can your colleague improve his or her work?</h3>
+  <div class="text-input">
   <br>
-  <input type="text" name="answer" value="answer"><br><br>
-  <button class="submit-button" type="submit">SUBMIT</button>
+  <textarea name="answer" cols="31" rows="9" value="answer"></textarea>
+  <br>
+   </div>
+  <div class="button-center">
+  <button class="front-buttons" type="submit">SUBMIT</button>
 </form>
+  <a href="/survey4/{{id}}"><button type="button" class="back-buttons">BACK</button></a>
+  </div>
 </div>
-</body>
+</body> 

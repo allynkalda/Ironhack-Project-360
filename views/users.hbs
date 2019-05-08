@@ -7,10 +7,16 @@
   <link rel="stylesheet" type="text/css" href="../public/style.css">
 </head>
 <body class="front-page">
-<div class="container">
+
 <h1>Who do you want to review today?</h1>
-{{#each users}}<div class="user-box">
-<img class="peer-photos" src="{{this.image}}"><h3><a href="/survey/{{this._id}}">{{this.firstName}}</a></h3>
+<div class="user-box">
+{{#each users}}
+<div class="every-photo"> 
+<img class="peer-photos" src="{{this.image}}">
+<div class="name-survey">
+<h4><a href="/survey/{{this._id}}"><button type="button" class="person-buttons">
+{{this.firstName}}</button></a></h4>
+</div>
 </div>
 {{/each}}
 </div>
