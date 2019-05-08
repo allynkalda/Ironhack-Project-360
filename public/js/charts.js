@@ -44,8 +44,7 @@ function printCharts () {
           yAxes: [{
             ticks: {
               beginAtZero: true,
-              suggestedMax: 10
-              
+              suggestedMax: 5              
             }
           }]
         }
@@ -79,7 +78,7 @@ function printCharts () {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 10
+                suggestedMax: 5
               }
             }]
           }
@@ -112,7 +111,7 @@ function printCharts () {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 10
+                suggestedMax: 5
               }
             }]
           }
@@ -145,7 +144,7 @@ function printCharts () {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 10
+                suggestedMax: 5
               }
             }]
           }
@@ -178,7 +177,7 @@ function printCharts () {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 10
+                suggestedMax: 5
               }
             }]
           }
