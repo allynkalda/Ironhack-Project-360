@@ -25,27 +25,17 @@ router.get('/users', checkIfAuthenticated, function (req, res, next) {
 })
 
 /* GET Survey page. */
-router.get('/survey/:id', function (req, res, next){
+router.get('/survey/:id', function (req, res, next) {
   const newSurveyObj = {
     evaluator: req.user.id,
     evaluated: req.params.id
   }
-  
-  /*create the newSurveyObj with the round*/
 
-<<<<<<< HEAD
-  Survey.create(survey)
-    .then((newSurvey) => {
-      console.log('Survey 0 - newSurvey', newSurvey)
-      res.render('survey/survey1', { id: newSurvey._id })
-    })
-    .catch((err) => console.log(err))
+  /* create the newSurveyObj with the round */
 
-  console.log(survey.evaluator)
-=======
-  Survey.find({evaluator: req.user.id, evaluated: req.params.id})
+  Survey.find({ evaluator: req.user.id, evaluated: req.params.id })
     .then((result) => {
-      console.log('these are the surveys', result);
+      console.log('these are the surveys', result)
       let round
       if (result.length >= 4) return res.render('survey/survey7')
       else if (result === null) round = 1
@@ -55,38 +45,36 @@ router.get('/survey/:id', function (req, res, next){
 
       Survey.create(newSurveyObj)
         .then((newSurvey) => {
-          //console.log('Survey 0 - newSurvey', newSurvey)
+          // console.log('Survey 0 - newSurvey', newSurvey)
           res.render('survey/survey1', { id: newSurvey._id })
           // console.log(id)
         })
         .catch((err) => console.log(err))
     })
     .catch((err) => console.log(err))
-
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
 })
 
 /* POST Survey page. */
 router.post('/survey/:id', function (req, res, next) {
-  //console.log('survey post id', req.params.id)
+  // console.log('survey post id', req.params.id)
   const { numbers } = req.body
   const id = req.params.id
-  //console.log(id)
-  //console.log(numbers)
+  // console.log(id)
+  // console.log(numbers)
 
   Survey.findOneAndUpdate({ _id: id }, { technical: numbers })
     .then((result) => {
-      res.render('survey/survey2', { id: result._id, })
+      res.render('survey/survey2', { id: result._id })
     })
     .catch((err) => console.log(err))
 })
 
 router.post('/survey/:id', function (req, res, next) {
-  //console.log('survey post id', req.params.id)
+  // console.log('survey post id', req.params.id)
   const { numbers } = req.body
   const id = req.params.id
-  //console.log(id)
-  //console.log(numbers)
+  // console.log(id)
+  // console.log(numbers)
 
   Survey.findOneAndUpdate({ _id: id }, { technical: numbers })
     .then((result) => {
@@ -103,15 +91,15 @@ router.get('/survey1/:id', function (req, res, next) {
 
 /* POST Survey1 page. */
 router.post('/survey1/:id', function (req, res, next) {
-  //console.log('survey post id', req.params.id)
+  // console.log('survey post id', req.params.id)
   const { numbers } = req.body
   const id = req.params.id
-  //console.log(id)
-  //console.log(numbers)
+  // console.log(id)
+  // console.log(numbers)
 
   Survey.findOneAndUpdate({ _id: id }, { social: numbers })
     .then((result) => {
-      //console.log(result)
+      // console.log(result)
       res.render('survey/survey3', { id: result._id, userId: req.params.userId })
     })
     .catch((err) => console.log(err))
@@ -125,11 +113,11 @@ router.get('/survey2/:id', function (req, res, next) {
 
 /* POST Survey2 page. */
 router.post('/survey2/:id', function (req, res, next) {
-  //console.log('survey post id', req.params.id)
+  // console.log('survey post id', req.params.id)
   const { numbers } = req.body
   const id = req.params.id
-  //console.log(id)
-  //console.log(numbers)
+  // console.log(id)
+  // console.log(numbers)
 
   Survey.findOneAndUpdate({ _id: id }, { leadership: numbers })
     .then((result) => {
@@ -183,15 +171,12 @@ router.post('/survey4/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
-<<<<<<< HEAD
 /* GET Survey5 page. */
 router.get('/survey5/:id', function (req, res, next) {
   const id = req.params.id
   res.render('survey/survey6', { id })
 })
 
-=======
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
 /* POST Survey5 page. */
 router.post('/survey5/:id', function (req, res, next) {
   console.log('survey post id', req.params.id)
@@ -199,7 +184,7 @@ router.post('/survey5/:id', function (req, res, next) {
   const id = req.params.id
   const user = req.params.userId
   console.log(user)
- 
+
   Survey.findOneAndUpdate({ _id: id }, { review: answer })
     .then((result) => {
       console.log(result)
@@ -208,26 +193,4 @@ router.post('/survey5/:id', function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
-<<<<<<< HEAD
 module.exports = router
-=======
-/* POST round and surveyNum page. */
-//name=John+Doe&gender=male&family=5&city=kent&city=miami&
-// const evaluator = req.user.id
-// router.post('/sent/:id', function (req, res, next) {
-
-//   const evaluator = req.user.id
-//   const surveyId = req.params.id
-//   const evaluated = req.params.userId
-
-//   Survey.findMany({ evaluator: evaluator})
-//     .then((answeredSurveys) => {
-//       answeredSurveys.filter((obj)=>{
-//         obj.evaluated === evaluated
-//       }) 
-//       res.render('survey/survey8')
-//     })
-//     .catch((err) => console.log(err))
-// })
-module.exports = router
->>>>>>> 43820c486cf93eefe0565cccfb73fbc6b9c88b27
