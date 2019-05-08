@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
 function printCharts () {
   axios.get(`${baseURL}/results`)
   .then((response) => {
+    
     const social = document.getElementById('socialChart').getContext('2d')
     const tech = document.getElementById('technicalChart').getContext('2d')
     const organ = document.getElementById('organizationalChart').getContext('2d')
