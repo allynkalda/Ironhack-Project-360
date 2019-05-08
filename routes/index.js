@@ -24,6 +24,7 @@ router.get('/users', checkIfAuthenticated, function (req, res, next) {
     .catch((err) => console.log(err))
 })
 
+
 /* GET Survey page. */
 router.get('/survey/:id', function (req, res, next){
   const newSurveyObj = {

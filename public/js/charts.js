@@ -39,7 +39,7 @@ function printCharts () {
           }]
         },
         options: {
-          responsive: true,
+          responsive: false,
           maintainAspectRatio: true,
           scales: {
             yAxes: [{
@@ -75,7 +75,7 @@ function printCharts () {
           }]
         },
         options: {
-          responsive: true,
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
@@ -109,6 +109,7 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
@@ -142,6 +143,7 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
@@ -175,6 +177,7 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
