@@ -3,19 +3,17 @@
 const baseURL = 'https://project-360.herokuapp.com';
 const canvas = document.querySelector('canvas')
 
-
 window.addEventListener('load', () => {
   printCharts()
 })
 function printCharts () {
   axios.get(`${baseURL}/results`)
-  .then((response) => {
-    
-    const social = document.getElementById('socialChart').getContext('2d')
-    const tech = document.getElementById('technicalChart').getContext('2d')
-    const organ = document.getElementById('organizationalChart').getContext('2d')
-    const leader = document.getElementById('leadershipChart').getContext('2d')
-    const moti = document.getElementById('motivationChart').getContext('2d')
+    .then((response) => {
+      const social = document.getElementById('socialChart').getContext('2d')
+      const tech = document.getElementById('technicalChart').getContext('2d')
+      const organ = document.getElementById('organizationalChart').getContext('2d')
+      const leader = document.getElementById('leadershipChart').getContext('2d')
+      const moti = document.getElementById('motivationChart').getContext('2d')
 
       var socialChart = new Chart(social, {
         type: 'bar',
