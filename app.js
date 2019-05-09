@@ -34,7 +34,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Origin', 'https://project-360.herokuapp.com')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
