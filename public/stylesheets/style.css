@@ -46,6 +46,20 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.025);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
 .front-page {
   background-image: linear-gradient(to top, white , rgb(66, 174, 246));
   height:100vh;
@@ -67,6 +81,14 @@ table {
 .logo-photo {
   padding: 50px 0px 40px 0px;
   width: 280px;
+    animation-duration: 2s;
+  animation-name: bounceIn;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+.dir-photo {
+  padding: 50px 0px 40px 0px;
+  width: 180px;
 }
 h1, h2 {
   font-size: 30px;
@@ -82,9 +104,9 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #3e5883;
+	background-color: rgba(28, 68, 156, 0.53);
 	border: none;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 }
 .extra-margin{
@@ -99,7 +121,7 @@ h1, h2 {
 	background-size: 42px 42px;
 	background-color: #1f2836;
 	border: none;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 
 }
@@ -109,9 +131,9 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: rgb(98, 98, 98);
+	background-color: rgba(77, 72, 72, 0.482);
 	border: none;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   margin-bottom: 20px;
 }
@@ -185,6 +207,7 @@ h3 {
   text-align: center;
   padding: 30px 20px 20px 20px;
   line-height: 30px;
+  color: #3e5883;
 }
 .surveys {
   font-size: 15px;
@@ -223,12 +246,12 @@ h3 {
 .person-buttons {
   margin-top: 10px;
 	height: 35px;
-	width: 80px;
+	width: 100px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color:  rgb(98, 98, 98);
+	background-color:  rgba(28, 68, 156, 0.53);
 	border: none;
-  font-size: 20px;
+  font-size: 18px;
   color:white;
 }
 textarea {
@@ -250,7 +273,7 @@ textarea {
 nav{
   height:50px;
   width:100%;
-  background-color: rgb(155, 155, 155);
+  background-color: rgba(28, 68, 156, 0.53);
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -258,7 +281,6 @@ nav{
   bottom: 0;
   left: 0;
   right: 0;
-  
 }
 nav div{
   display: inline-block;

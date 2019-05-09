@@ -11,10 +11,14 @@ cloudinary.config({
 const storage = cloudinaryStorage({
   cloudinary: cloudinary,
   folder: 'demo',
+<<<<<<< HEAD
   allowedFormats: ['jpg', 'png'],
   // filename: function (req, file, cb) {
   //   cb(undefined, 'my-file-name')
   // }
+=======
+  allowedFormats: ['jpg', 'png']
+>>>>>>> 9dce381c26ce2c905d529c69b018fc58184cc869
 })
 
 const parser = multer({ storage: storage })
