@@ -23,14 +23,14 @@ Get results in the chart by Date/ Position/ ID</br>
 Add rounds (new survey).
 </br>
 <h2>Data Structure</h2>
-````js
+```js
 User { 
 Name: String
 Department: enum[]
 Position: enum []
 Id: user_id
          }
-````
+```
 Round {
 	Surveys: [],
 	}
