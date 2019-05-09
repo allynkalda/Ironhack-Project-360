@@ -36,7 +36,7 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
     res.render('passport/signup', { message: 'Needed username and password' })
     return
   }
- if (req.file) { const image = req.file.secure_url } else {const image = undefined }
+  const image = req.file.secure_url 
   
   User.findOne({ username })
     .then((user) => {
