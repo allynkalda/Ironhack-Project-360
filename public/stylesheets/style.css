@@ -85,6 +85,10 @@ table {
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
 }
+.dir-photo {
+  padding: 50px 0px 40px 0px;
+  width: 180px;
+}
 h1, h2 {
   font-size: 30px;
   font-weight: 600;
