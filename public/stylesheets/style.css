@@ -71,7 +71,7 @@ h1, h2 {
   font-size: 30px;
   font-weight: 600;
   padding: 30px 30px 20px 30px;
-  color: #1f2836;
+  color:#3e5883;
   text-align: center;
   line-height: 50px;
 }
@@ -81,7 +81,7 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #1f2836;
+	background-color: #3e5883;
 	border: none;
   font-size: 16px;
   color: white;
@@ -121,7 +121,7 @@ h1, h2 {
 label {
   font-size: 20px;
   font-weight: 800;
-  color: #1f2836;
+  color: #3e5883;
   text-align: center;
 }
 input[type="text"] {
@@ -248,7 +248,7 @@ textarea {
 nav{
   height:50px;
   width:100%;
-  background-color: gray;
+  background-color: rgb(155, 155, 155);
   display:flex;
   justify-content: space-around;
   align-items: center;
