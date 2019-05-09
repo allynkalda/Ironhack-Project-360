@@ -15,13 +15,13 @@ passportRouter.get('/login', (req, res, next) => {
 
 passportRouter.post('/login', passport.authenticate('local', {
   successRedirect: '/directory',
-  failureRedirect: 'passport/login',
+  failureRedirect: '/login',
   passReqToCallback: true
 }))
 
 passportRouter.get('/logout', (req, res) => {
   req.logout()
-  res.redirect('/login')
+  res.redirect('/')
 })
 
 passportRouter.get('/signup', (req, res, next) => {
@@ -29,14 +29,15 @@ passportRouter.get('/signup', (req, res, next) => {
 })
 
 passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
-  const image = req.file.secure_url
+  
   const { username, password, firstName, lastName, department, position } = req.body
 
   if (username === '' || password === '') {
-    res.render('passport/signup', { message: 'Indicate username and password' })
+    res.render('passport/signup', { message: 'Needed username and password' })
     return
   }
-
+ if (req.file) { const image = req.file.secure_url } else {const image = undefined }
+  
   User.findOne({ username })
     .then((user) => {
       if (user !== null) {

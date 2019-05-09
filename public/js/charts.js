@@ -37,13 +37,13 @@ function printCharts () {
           }]
         },
         options: {
-          responsive: true,
+          responsive: false,
           maintainAspectRatio: true,
           scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 10
+                suggestedMax:5
 
               }
             }]
@@ -73,12 +73,12 @@ function printCharts () {
           }]
         },
         options: {
-          responsive: true,
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 5
+                suggestedMax:5
               }
             }]
           }
@@ -107,11 +107,12 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 5
+                suggestedMax:5
               }
             }]
           }
@@ -140,11 +141,12 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 5
+                suggestedMax:5
               }
             }]
           }
@@ -173,11 +175,12 @@ function printCharts () {
           }]
         },
         options: {
+          responsive: false,
           scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 5
+                suggestedMax:5
               }
             }]
           }

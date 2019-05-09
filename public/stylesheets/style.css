@@ -27,7 +27,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  position:relative;
 }
 ol, ul {
 	list-style: none;
@@ -45,7 +46,11 @@ table {
 	border-spacing: 0;
 }
 .front-page {
-  background-color: #FEFFBE;
+  background-image: linear-gradient(to top, white , rgb(66, 174, 246));
+  height:100vh;
+}
+.results-back{
+  background-color:rgb(156, 221, 251);
 }
 .container {
   display: flex;
@@ -55,14 +60,18 @@ table {
   align-self: center;
   align-items: center;
 }
+.container div{
+  margin: 20px auto;
+}
 .logo-photo {
   padding: 50px 0px 40px 0px;
-  width: 250px;
+  width: 280px;
 }
 h1, h2 {
   font-size: 30px;
+  font-weight: 600;
   padding: 30px 30px 20px 30px;
-  color: #586054;
+  color: #1f2836;
   text-align: center;
   line-height: 50px;
 }
@@ -72,10 +81,26 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #60695C;
+	background-color: #1f2836;
 	border: none;
   font-size: 16px;
   color: white;
+}
+.extra-margin{
+  margin-bottom:80px;
+}
+#reviewButton{
+  margin-top: 10px;
+  margin-bottom
+	height: 40px;
+	width: 250px;
+	border-radius: 10px;
+	background-size: 42px 42px;
+	background-color: #1f2836;
+	border: none;
+  font-size: 16px;
+  color: white;
+
 }
 .back-buttons {
   margin-top: 10px;
@@ -83,25 +108,27 @@ h1, h2 {
 	width: 250px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #CAC4CE;
+	background-color: rgb(98, 98, 98);
 	border: none;
   font-size: 16px;
   color: white;
   margin-bottom: 20px;
 }
 .signup {
-  font-size: 1em;
+  font-size: 2em;
 }
+
 label {
-  font-size: 10px;
-  color: #586054;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1f2836;
   text-align: center;
 }
 input[type="text"] {
   font-family: monospace;
   padding-left: 20px;
   font-size: 15px;
-  margin: 5px 0px 5px 0px;
+  margin: 10px 0px;
   height: 20px;
   width: 230px;
   -webkit-border-radius: 50px;
@@ -126,17 +153,25 @@ input[type="file"] {
   font-size: 10px;
 }
 .account-message {
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.account-message a{
+ text-decoration: none;
+}
+.error-message{
+  font-size: 15px;
+  color:red;
 }
 #graffics div{
   position: relative;
   height: 100%;
-  width: 99%;
+  width: 100%;
   background-color: white;
   border: black 2px solid;
-  margin: 2% auto;
+  margin: 10% auto;
 }
 .peer-photos {
   border-radius: 50%;
@@ -190,10 +225,10 @@ h3 {
 	width: 80px;
 	border-radius: 10px;
 	background-size: 42px 42px;
-	background-color: #F6AE2D;
+	background-color:  rgb(98, 98, 98);
 	border: none;
-  font-size: 15px;
-  color: #60695C;
+  font-size: 20px;
+  color:white;
 }
 textarea {
   font-size: 15px;
@@ -209,5 +244,25 @@ textarea {
 }
 .review-text {
   font-size: 15px;
+}
+nav{
+  height:50px;
+  width:100%;
+  background-color: gray;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   
+}
+nav div{
+  display: inline-block;
+  height:50%;
+  }
+nav img{
+  height: 30px;
+  width:30px;
 }
