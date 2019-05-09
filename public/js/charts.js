@@ -1,5 +1,6 @@
 
-const baseURL = 'http://localhost:3007'
+//const baseURL = 'http://localhost:3007'
+const baseURL = 'https://project-360.herokuapp.com/';
 const canvas = document.querySelector('canvas')
 
 
