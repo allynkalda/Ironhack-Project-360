@@ -23,7 +23,7 @@ Get results in the chart by Date/ Position/ ID</br>
 Add rounds (new survey).
 </br>
 <h2>Data Structure</h2>
-````s
+````js
 User { 
 Name: String
 Department: enum[]
