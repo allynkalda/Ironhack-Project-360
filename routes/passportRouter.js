@@ -37,7 +37,7 @@ passportRouter.post('/signup', parser.single('image'), (req, res, next) => {
     return
   }
   const image = req.file.secure_url 
-  
+  console.log(image)
   User.findOne({ username })
     .then((user) => {
       if (user !== null) {

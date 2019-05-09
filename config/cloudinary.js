@@ -12,9 +12,9 @@ const storage = cloudinaryStorage({
   cloudinary: cloudinary,
   folder: 'demo',
   allowedFormats: ['jpg', 'png'],
-  filename: function (req, file, cb) {
-    cb(undefined, 'my-file-name')
-  }
+  // filename: function (req, file, cb) {
+  //   cb(undefined, 'my-file-name')
+  // }
 })
 
 const parser = multer({ storage: storage })
