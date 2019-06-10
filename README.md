@@ -97,11 +97,27 @@ Surveys {
 - Create main hbs files and link them.
 - CSS.
 
+## Getting Started
+
+**Prerequisites**
+
+- Node
+- Npm
+
+**Installing**
+
+Clone the repo. In the command line enter:
+```
+npm install
+```
+To start:
+```
+npm run dev
+```
 
 
 ## Links
 
-Github: https://github.com/EricCapdevila/Ironhack-Project-360.</br>
-Kanban: https://trello.com/b/JwAyVhUb/kanban-board</br>
+Trello: https://trello.com/b/JwAyVhUb/kanban-board</br>
 Slides: https://docs.google.com/presentation/d/1YUnmDEfTmCJcEBaG47I_8in3wP_JQ73q4HciCOnsl-o/edit?usp=sharing</br>
 Webpage: https://project-360.herokuapp.com/</br>
