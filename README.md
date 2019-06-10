@@ -7,7 +7,7 @@ The mobile app allows teams to perform 360° surveys so the employees can provid
 The app will utilize a Chart API to visualize the data on the results of their reviews which will make the information easily understandable by the user.
 </br>
 
-![image](https://i.postimg.cc/Qdn0HY3d/360.png)
+![image](https://i.postimg.cc/d3MDVyn0/360.png)
 
 <h2>MVP</h2>
 </br>
