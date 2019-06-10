@@ -1,11 +1,12 @@
-<h1>360HR</h1>
+<h1>360°</h1>
 
 <h2>Short description</h2>
 </br>
-The mobile app allows teams to perform 360 tests so the team mates can provide constructive review of peers, managers and other people in their company. The user has to complete the same survey in four regular intervals within a month for every person participating in the evaluation. This allows for continuous feedback.
+The mobile app allows teams to perform 360° surveys so the employees can provide constructive review of peers, managers and other people in their company. The user has to complete the same survey in four regular intervals within a month for every person participating in the evaluation. This allows for continuous feedback.
 </br>
 The app will utilize a Chart API to visualize the data on the results of their reviews which will make the information easily understandable by the user.
 </br>
+![360-image](https://i.postimg.cc/Qdn0HY3d/360.png)
 <h2>MVP</h2>
 </br>
 Basic authentication in a log in page</br>
@@ -22,8 +23,6 @@ Check punctuations given.</br>
 Get results in the chart by Date/ Position/ ID</br>
 Add rounds (new survey).
 </br>
-
-
 
 <h2>Data Structure</h2>
 **User**
@@ -51,8 +50,6 @@ Surveys {
 }
 
 ```
-
-
 
 ## User story
 
