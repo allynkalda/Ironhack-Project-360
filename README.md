@@ -3,9 +3,9 @@
 <h2>Short description</h2>
 </br>
 The mobile app allows teams to perform 360° surveys so the employees can provide constructive review of peers, managers and other people in their company. The user has to complete the same survey in four regular intervals within a month for every person participating in the evaluation. This allows for continuous feedback.
-</br>
+</br>&nbsp;
 The app will utilize a Chart API to visualize the data on the results of their reviews which will make the information easily understandable by the user.
-</br>
+</br>&nbsp;
 
 ![image](https://i.postimg.cc/d3MDVyn0/360.png)
 
