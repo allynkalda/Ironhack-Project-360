@@ -10,7 +10,7 @@
     "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "bcrypt-nodejs": "0.0.3",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "cloudinary": "^1.14.0",
     "connect-ensure-login": "^0.1.1",
     "connect-flash": "^0.1.1",
